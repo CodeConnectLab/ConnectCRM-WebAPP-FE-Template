@@ -8,24 +8,24 @@ export default function Footer() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Code Connect{" "}
+          Connect Docs{" "}
         </a>{" "}
         <a
-          href="https://www.codeconnect.in/"
+          // href="https://www.codeconnect.in/"
           target="_blank"
           rel="noopener noreferrer"
         >
           | Term of Service{" "}
         </a>{" "}
         <a
-          href="https://www.codeconnect.in/"
+          // href="https://www.codeconnect.in/"
           target="_blank"
           rel="noopener noreferrer"
         >
           | Privacy Policy{" "}
         </a>{" "}
         <a
-          href="https://forms.gle/7f4nmkJN9zMMfyiH9"
+          // href="https://forms.gle/7f4nmkJN9zMMfyiH9"
           target="_blank"
           rel="noopener noreferrer"
           className="text-green"
@@ -36,11 +36,11 @@ export default function Footer() {
       <span>
         All rights reserved{" "}
         <a
-          href="https://www.codeconnect.in/"
+          // href="https://www.codeconnect.in/"
           target="_blank"
           rel="noopener noreferrer"
         >
-          © Code Connect
+          © Connect Docs
         </a>{" "}
         {new Date().getFullYear()}
       </span>

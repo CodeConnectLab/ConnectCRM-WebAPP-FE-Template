@@ -11,6 +11,7 @@ import "react-toastify/dist/ReactToastify.css";
 import UniversalLoader from "./components/CommonUI/Loader";
 import { useEffect, useState } from "react";
 import ForgotPassword from "./Pages/ForgotPassword/ForgotPassword";
+import SMSReport from "./Pages/SMS/SMSReport";
 
 export default function App() {
   const [loaderTime, setLoaderTime] = useState(true);
@@ -55,12 +56,12 @@ export default function App() {
           <Route
             path="/"
             element={
-              <PrivateRoute>
+              // <PrivateRoute>
                 <Dashboard />
-              </PrivateRoute>
+              // </PrivateRoute>
             }
           >
-            <Route index element={<Overview />} />;
+            <Route index element={<SMSReport />} />;
             {navRoutes?.map((route, item) => {
               const routProps = {
                 path: route.path,

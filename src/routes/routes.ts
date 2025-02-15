@@ -13,6 +13,8 @@ import ImportedLeads from "../Pages/Leads/ImportedLeads";
 import ImportLeads from "../Pages/Leads/ImportLeads";
 import LeadAction from "../Pages/Leads/LeadAction";
 import OutsourcedLeads from "../Pages/Leads/OutsourcedLeads";
+import Logout from "../Pages/Logout";
+import ManageDoctors from "../Pages/ManageDoctors/ManageDoctors";
 import ProductAndServiceDash from "../Pages/ProductAndServices/ProductAndServiceDash";
 import CallReport from "../Pages/Reports/CallReport";
 import ManageReports from "../Pages/Reports/ManageReports";
@@ -23,6 +25,26 @@ import WhatsAppCompose from "../Pages/WhatsAppPanel/WhatsAppCompose";
 import WhatsAppReport from "../Pages/WhatsAppPanel/WhatsAppReport";
 
 const navRoutes = [
+  {
+    path: "doctors",
+    component: SMSReport,
+  },
+  {
+    path: "patients",
+    component: SMSReport,
+  },
+  {
+    path: "pharmacy",
+    component: SMSReport,
+  },
+  {
+    path: "billing",
+    component: SMSReport,
+  },
+  {
+    path: "logout",
+    component: Logout,
+  },
   {
     path: "api-integeration",
     component: ApiIntegeration,
