@@ -36,14 +36,15 @@ const SigninWithPassword = () => {
     setIsLoading(true);
 
     try {
-      const { data, error } = await API.postAuthAPI(formData, END_POINT.LOGIN);
-      if (error || !data) throw Error(error);
-      const user = data.user;
-      LocalStorage.setStringData("refreshToken", data.refreshToken);
-      LocalStorage.setStringData("accessToken", data.token);
-      LocalStorage.setStringData("user", JSON.stringify(user));
+      // const { data, error } = await API.postAuthAPI(formData, END_POINT.LOGIN);
+      // if (error || !data) throw Error(error);
+      // const user = data.user;
+      // LocalStorage.setStringData("refreshToken", data.refreshToken);
+      // LocalStorage.setStringData("accessToken", data.token);
+      // LocalStorage.setStringData("user", JSON.stringify(user));
 
-      toast.success(`Welcome back ${user?.name}!`);
+      // toast.success(`Welcome back ${user?.name}!`);
+      toast.success(`Welcome back!`);
       navigate("/"); // Redirect to dashboard
     } catch (error: any) {
       localStorage.clear();

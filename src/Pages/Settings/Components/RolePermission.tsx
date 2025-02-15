@@ -22,6 +22,19 @@ interface Permission {
   key?: string;
 }
 
+interface MenuItem {
+  icon: React.ReactElement;
+  label: string;
+  route: string;
+  children?: MenuItem[];
+}
+
+interface ChildItem {
+  key: string;
+  label: string;
+  // Add other properties as needed
+}
+
 const roleOptions = [
   { value: "super-admin", label: "Super Admin" },
   { value: "Team-Admin", label: "Team Admin" },
@@ -40,7 +53,7 @@ const RolePermissions = () => {
 
   // Transform menuGroups into permissions array with children
   const initialPermissions: Permission[] = menuGroups.flatMap((group) =>
-    group.menuItems.map((item, index) => ({
+    group.menuItems.map((item: any, index) => ({
       key: `${group.name}-${index}`,
       id: `${group.name}-${index}`,
       featureName: item.label,
@@ -49,7 +62,7 @@ const RolePermissions = () => {
       edit: false,
       delete: false,
       view: false,
-      children: item.children?.map((child, childIndex) => ({
+      children: item?.children?.map((child: MenuItem, childIndex: number) => ({
         key: `${group.name}-${index}-${childIndex}`,
         id: `${group.name}-${index}-${childIndex}`,
         featureName: child.label,

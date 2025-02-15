@@ -15,6 +15,7 @@ export const getAuthAPI = async <T>(
   // navigate?: NavigateFunction,
   params: Record<string, any> = {}
 ): Promise<ApiResponse<T>> => {
+  return { message: "", error: "" };
   const header = tokenRequired ? await getAuthHeader() : "";
   const config: ApiConfig = {
     method: "get",
@@ -42,6 +43,8 @@ export const postAuthAPI = async <T>(
   tokenRequired: boolean = false
   //   navigate: NavigateFunction | null = null
 ): Promise<ApiResponse<T>> => {
+  return { message: "", error: "" };
+
   const header = tokenRequired ? await getAuthHeader() : "";
   const config: ApiConfig = {
     method: "post",
@@ -71,6 +74,8 @@ export const postAuthAPI1 = async <T>(
   isFormData: boolean = false,
   config: any = {}
 ): Promise<ApiResponse<T>> => {
+  return { message: "", error: "" };
+
   try {
     const response = await axios({
       method: "post",
@@ -98,6 +103,8 @@ export const DeleteAuthAPI = async <T>(
   // Token: string = "",
   // navigate?: NavigateFunction
 ): Promise<ApiResponse<T>> => {
+  return { message: "", error: "" };
+
   const header = tokenRequired ? await getAuthHeader() : "";
   const config: ApiConfig = {
     method: "delete",
@@ -126,6 +133,7 @@ export const updateAuthAPI = async <T>(
   // Token: string = "",
   // navigate?: NavigateFunction
 ): Promise<ApiResponse<T>> => {
+  return { message: "", error: "" };
   const header = tokenRequired ? await getAuthHeader() : "";
   const config: ApiConfig = {
     method: "put",
@@ -155,6 +163,8 @@ export const PutAuthAPI = async <T>(
   tokenRequired: boolean = false
   // navigate?: NavigateFunction
 ): Promise<ApiResponse<T>> => {
+  return { message: "", error: "" };
+
   const header = tokenRequired ? await getAuthHeader() : "";
   const config: ApiConfig = {
     method: "put",
