@@ -12,6 +12,8 @@ import UniversalLoader from "./components/CommonUI/Loader";
 import { useEffect, useState } from "react";
 import ForgotPassword from "./Pages/ForgotPassword/ForgotPassword";
 import SMSReport from "./Pages/SMS/SMSReport";
+import ManageDoctors from "./Pages/ManageDoctors/ManageDoctors";
+
 
 export default function App() {
   const [loaderTime, setLoaderTime] = useState(true);
@@ -61,7 +63,7 @@ export default function App() {
               // </PrivateRoute>
             }
           >
-            <Route index element={<SMSReport />} />;
+            <Route index element={<ManageDoctors />} />;
             {navRoutes?.map((route, item) => {
               const routProps = {
                 path: route.path,
