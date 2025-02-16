@@ -2,6 +2,7 @@ import CalendarBox from "../components/CalenderBox/CalenderBox";
 import ProfileBox from "../components/ProfileBox";
 import SettingBoxes from "../components/SettingBoxes";
 import ApiIntegeration from "../Pages/ApiIntegeration/ApiIntegeration";
+import Billing from "../Pages/Billing/Billing";
 import EmployeeList from "../Pages/CallManage/EmployeeList";
 import EmployeeReport from "../Pages/CallManage/EmployeeReport";
 import ContactList from "../Pages/ContactsUpload/ContactList";
@@ -15,6 +16,8 @@ import LeadAction from "../Pages/Leads/LeadAction";
 import OutsourcedLeads from "../Pages/Leads/OutsourcedLeads";
 import Logout from "../Pages/Logout";
 import ManageDoctors from "../Pages/ManageDoctors/ManageDoctors";
+import ManagePatients from "../Pages/ManagePatients/ManagePatients";
+import ManagePharmacy from "../Pages/ManagePharmacy/ManagePharmacy";
 import ProductAndServiceDash from "../Pages/ProductAndServices/ProductAndServiceDash";
 import CallReport from "../Pages/Reports/CallReport";
 import ManageReports from "../Pages/Reports/ManageReports";
@@ -27,19 +30,19 @@ import WhatsAppReport from "../Pages/WhatsAppPanel/WhatsAppReport";
 const navRoutes = [
   {
     path: "doctors",
-    component: SMSReport,
+    component: ManageDoctors,
   },
   {
     path: "patients",
-    component: SMSReport,
+    component: ManagePatients,
   },
   {
     path: "pharmacy",
-    component: SMSReport,
+    component: ManagePharmacy,
   },
   {
     path: "billing",
-    component: SMSReport,
+    component: Billing,
   },
   {
     path: "logout",

@@ -9,6 +9,7 @@ interface DateTimePickerProps {
   enableTime?: boolean;
   defaultValue?: string;
   customClassName?: string;
+  required?: boolean;
 }
 
 const AntDateTimePicker: React.FC<DateTimePickerProps> = ({
@@ -17,6 +18,7 @@ const AntDateTimePicker: React.FC<DateTimePickerProps> = ({
   enableTime = false,
   defaultValue,
   customClassName = "",
+  required = false,
 }) => {
   const handleChange: DatePickerProps["onChange"] = (date, dateString) => {
     if (date) {
@@ -32,6 +34,7 @@ const AntDateTimePicker: React.FC<DateTimePickerProps> = ({
       {label && (
         <label className="mb-1 block text-body-sm font-medium text-dark dark:text-white">
           {label}
+          {required && <span className="text-red"> *</span>}
         </label>
       )}
       <DatePicker
@@ -42,6 +45,7 @@ const AntDateTimePicker: React.FC<DateTimePickerProps> = ({
         defaultValue={defaultValue ? dayjs(defaultValue) : undefined}
         format={enableTime ? "DD/MM/YYYY - HH:mm" : "DD/MM/YYYY"}
         onChange={handleChange}
+        required={required}
         placement="bottomLeft"
         size="large"
         popupClassName="dark:bg-dark-2 dark:border-dark-3"
